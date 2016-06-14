@@ -7,7 +7,7 @@ class DecisionLabel extends Component {
 
 	render() {
 		return (
-			<span>{this.props.verdict}</span>
+			<span className="well">{this.props.verdict}</span>
 		);
 	}
 }

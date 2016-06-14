@@ -20378,7 +20378,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _drink_decision_maker = __webpack_require__(171);
+	var _drink_decision_maker = __webpack_require__(169);
 
 	var _drink_decision_maker2 = _interopRequireDefault(_drink_decision_maker);
 
@@ -20386,7 +20386,7 @@
 
 	var _decisionLabel2 = _interopRequireDefault(_decisionLabel);
 
-	var _decisionButton = __webpack_require__(169);
+	var _decisionButton = __webpack_require__(171);
 
 	var _decisionButton2 = _interopRequireDefault(_decisionButton);
 
@@ -20425,8 +20425,20 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) }),
-					_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict })
+					_react2.default.createElement(
+						'div',
+						{ className: 'row' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-sm-6' },
+							_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-sm-6' },
+							_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict })
+						)
+					)
 				);
 			}
 		}]);
@@ -20438,58 +20450,18 @@
 
 /***/ },
 /* 169 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
+	exports.makeADecision = function() {
+	    return (Math.ceil(Math.random() * 10) % 2 == 0 ? "Nah, fam" : "Go have a drink");
+	}
 
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var DecisionButton = function (_Component) {
-		_inherits(DecisionButton, _Component);
-
-		function DecisionButton(props) {
-			_classCallCheck(this, DecisionButton);
-
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(DecisionButton).call(this, props));
-		}
-
-		_createClass(DecisionButton, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'button',
-					{ onClick: this.props.handleClick },
-					'decide!'
-				);
-			}
-		}]);
-
-		return DecisionButton;
-	}(_react.Component);
-
-	exports.default = DecisionButton;
 
 /***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -20519,11 +20491,11 @@
 		}
 
 		_createClass(DecisionLabel, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'span',
-					null,
+					"span",
+					{ className: "well" },
 					this.props.verdict
 				);
 			}
@@ -20536,12 +20508,52 @@
 
 /***/ },
 /* 171 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	exports.makeADecision = function() {
-	    return (Math.ceil(Math.random() * 10) % 2 == 0 ? "Nah, fam" : "Go have a drink");
-	}
+	"use strict";
 
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var DecisionButton = function (_Component) {
+		_inherits(DecisionButton, _Component);
+
+		function DecisionButton(props) {
+			_classCallCheck(this, DecisionButton);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(DecisionButton).call(this, props));
+		}
+
+		_createClass(DecisionButton, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"button",
+					{ className: "btn btn-lg btn-danger", onClick: this.props.handleClick },
+					"decide!"
+				);
+			}
+		}]);
+
+		return DecisionButton;
+	}(_react.Component);
+
+	exports.default = DecisionButton;
 
 /***/ }
 /******/ ]);
