@@ -20489,7 +20489,7 @@
 				}
 				return _react2.default.createElement(
 					'div',
-					{ className: 'decision-label-box' },
+					{ className: 'decision-label-box col-xs-12' },
 					_react2.default.createElement(
 						'span',
 						{ className: colorClass },
@@ -20542,7 +20542,7 @@
 			value: function render() {
 				return _react2.default.createElement(
 					"div",
-					{ className: "decision-button-box" },
+					{ className: "decision-button-box col-xs-12" },
 					_react2.default.createElement(
 						"button",
 						{ onClick: this.props.handleClick },

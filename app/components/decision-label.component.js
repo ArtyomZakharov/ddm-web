@@ -13,7 +13,7 @@ class DecisionLabel extends Component {
 			colorClass = 'negative';
 		}
 		return (
-			<div className="decision-label-box">
+			<div className="decision-label-box col-xs-12">
 				<span className={colorClass}>{this.props.verdict}</span>
 			</div>
 		);

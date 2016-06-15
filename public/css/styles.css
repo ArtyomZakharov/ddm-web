@@ -1,33 +1,34 @@
 * {
-	font-family: Segoe UI, Arial;
+    font-family: Segoe UI, Arial;
+    font-size: 36px;
 }
 
 .negative {
-	background: rgba(255, 0, 0, 0.5);
+    background: rgba(255, 0, 0, 0.5);
 }
 
 .positive {
-	background: rgba(0, 128, 0, 0.5);
+    background: rgba(0, 128, 0, 0.5);
 }
 
-.decision-label-box, .decision-button-box {
-	/*margin: auto;*/
-	padding-left: 50%;
-	padding-right: 50%;
+.decision-label-box,
+.decision-button-box {
+    margin-top: 20px;
+}
+
+.decision-label-box span,
+.decision-button-box button {
+    width: 150px;
 }
 
 .decision-label-box span {
-	text-align: center;
-	width: 300px;
-	padding: 20px 0 20px 0;
 	white-space: nowrap;
+	padding: 20px;
 }
 
 .decision-button-box button {
-	width: 300px;
-	padding: 20px 0 20px 0;
-}
-
-.decision-label-box {
-	margin: 20px 0px 20px 0px;
+	width: 200px;
+	background: rgba(0, 49, 255, 0.5);
+	border: none;
+	border-radius: 10px;
 }
