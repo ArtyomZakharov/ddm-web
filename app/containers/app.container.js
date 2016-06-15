@@ -22,14 +22,8 @@ class AppContainer extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="row">
-					<div className="col-sm-6">
-						<DecisionButton handleClick={this.stateVerdict.bind(this)} />
-					</div>
-					<div className="col-sm-6">
-						<DecisionLabel verdict={this.state.verdict} />
-					</div>
-				</div>
+				<DecisionLabel verdict={this.state.verdict} />
+				<DecisionButton handleClick={this.stateVerdict.bind(this)} />
 			</div>
 		);
 	};

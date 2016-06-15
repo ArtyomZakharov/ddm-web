@@ -20425,20 +20425,8 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(
-						'div',
-						{ className: 'row' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'col-sm-6' },
-							_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'col-sm-6' },
-							_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict })
-						)
-					)
+					_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict }),
+					_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
 				);
 			}
 		}]);
@@ -20461,7 +20449,7 @@
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -20491,12 +20479,22 @@
 		}
 
 		_createClass(DecisionLabel, [{
-			key: "render",
+			key: 'render',
 			value: function render() {
+				var colorClass = '';
+				if (this.props.verdict == 'Go have a drink') {
+					colorClass = 'positive';
+				} else if (this.props.verdict == 'Nah, fam') {
+					colorClass = 'negative';
+				}
 				return _react2.default.createElement(
-					"span",
-					{ className: "well" },
-					this.props.verdict
+					'div',
+					{ className: 'decision-label-box' },
+					_react2.default.createElement(
+						'span',
+						{ className: colorClass },
+						this.props.verdict
+					)
 				);
 			}
 		}]);
@@ -20543,9 +20541,13 @@
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					"button",
-					{ className: "btn btn-lg btn-danger", onClick: this.props.handleClick },
-					"decide!"
+					"div",
+					{ className: "decision-button-box" },
+					_react2.default.createElement(
+						"button",
+						{ onClick: this.props.handleClick },
+						"decide!"
+					)
 				);
 			}
 		}]);

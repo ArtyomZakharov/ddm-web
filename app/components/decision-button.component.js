@@ -7,7 +7,9 @@ class DecisionButton extends Component {
 
 	render() {
 		return (
-			<button className="btn btn-lg btn-danger" onClick={this.props.handleClick}>decide!</button>
+			<div className="decision-button-box">
+				<button onClick={this.props.handleClick}>decide!</button>
+			</div>
 		);
 	}
 }

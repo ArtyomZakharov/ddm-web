@@ -6,8 +6,16 @@ class DecisionLabel extends Component {
 	}
 
 	render() {
+		var colorClass = '';
+		if (this.props.verdict == 'Go have a drink') {
+			colorClass = 'positive';
+		} else if (this.props.verdict == 'Nah, fam') {
+			colorClass = 'negative';
+		}
 		return (
-			<span className="well">{this.props.verdict}</span>
+			<div className="decision-label-box">
+				<span className={colorClass}>{this.props.verdict}</span>
+			</div>
 		);
 	}
 }

@@ -1,0 +1,33 @@
+* {
+	font-family: Segoe UI, Arial;
+}
+
+.negative {
+	background: rgba(255, 0, 0, 0.5);
+}
+
+.positive {
+	background: rgba(0, 128, 0, 0.5);
+}
+
+.decision-label-box, .decision-button-box {
+	/*margin: auto;*/
+	padding-left: 50%;
+	padding-right: 50%;
+}
+
+.decision-label-box span {
+	text-align: center;
+	width: 300px;
+	padding: 20px 0 20px 0;
+	white-space: nowrap;
+}
+
+.decision-button-box button {
+	width: 300px;
+	padding: 20px 0 20px 0;
+}
+
+.decision-label-box {
+	margin: 20px 0px 20px 0px;
+}
