@@ -25,8 +25,10 @@ class AppContainer extends React.Component {
 		return (
 			<div>
 				<Header />
-				<DecisionLabel verdict={this.state.verdict} />
-				<DecisionButton handleClick={this.stateVerdict.bind(this)} />
+				<div className="decision-wrapper">
+					<DecisionLabel verdict={this.state.verdict} />
+					<DecisionButton handleClick={this.stateVerdict.bind(this)} />
+				</div>
 				<Footer />
 			</div>
 		);
