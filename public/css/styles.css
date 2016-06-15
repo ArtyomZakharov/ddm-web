@@ -32,3 +32,18 @@
 	border: none;
 	border-radius: 10px;
 }
+
+.header {
+	color: #fff;
+	background: #F44336;
+	width: 100%;
+	top: 0px;
+}
+
+.footer {
+	position: absolute;
+	color: #fff;
+	background: #F44336;
+	width: 100%;
+	bottom: 0px;
+}

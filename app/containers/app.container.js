@@ -3,6 +3,8 @@ import ddm from 'drink_decision_maker';
 
 import DecisionLabel from '../components/decision-label.component';
 import DecisionButton from '../components/decision-button.component';
+import Header from '../components/header.component';
+import Footer from '../components/footer.component';
 
 class AppContainer extends React.Component {
 	constructor(props) {
@@ -22,8 +24,10 @@ class AppContainer extends React.Component {
 	render() {
 		return (
 			<div>
+				<Header />
 				<DecisionLabel verdict={this.state.verdict} />
 				<DecisionButton handleClick={this.stateVerdict.bind(this)} />
+				<Footer />
 			</div>
 		);
 	};
