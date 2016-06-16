@@ -1,5 +1,5 @@
 * {
-    font-family: Ubuntu Mono, Segoe UI Semilight, Arial;
+    font-family: Ubuntu Mono, Segoe UI, Arial;
 }
 
 #content {
@@ -19,6 +19,7 @@
 
 div.dec-lbl {
 	font-size: 128px;
+    margin-top: 30px;
 }
 
 button.dec-btn {
