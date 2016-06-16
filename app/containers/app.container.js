@@ -11,7 +11,7 @@ class AppContainer extends React.Component {
 		super(props);
 
 		this.state = {
-			verdict: 'Dun kno, blud'
+			verdict: null
 		}
 	}
 
@@ -24,12 +24,8 @@ class AppContainer extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header />
-				<div className="decision-wrapper">
-					<DecisionLabel verdict={this.state.verdict} />
-					<DecisionButton handleClick={this.stateVerdict.bind(this)} />
-				</div>
-				<Footer />
+				<DecisionLabel verdict={this.state.verdict} />
+				<DecisionButton handleClick={this.stateVerdict.bind(this)} />
 			</div>
 		);
 	};

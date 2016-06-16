@@ -1,69 +1,31 @@
 * {
-    font-family: Segoe UI, Arial;
-    font-size: 36px;
-}
-
-body {
-	background: #E1F5FE;
+    font-family: Ubuntu Mono, Segoe UI Semilight, Arial;
 }
 
 #content {
-	top: 0px;
-	max-height: calc(100% - 120px);
-    overflow-y: scroll;
-    /*padding: 0px 10%;*/
-    /*margin-top: 60px;*/
-}
-
-.negative {
-    background: #F44336;
-    color: #fff;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    padding-top: 20%;
 }
 
 .positive {
-    background: #4CAF50;
-    color: #000;
+	text-shadow: 0px 0px 30px green;
 }
 
-.decision-label-box,
-.decision-button-box {
-    margin-top: 20px;
+.negative {
+	text-shadow: 0px 0px 30px red;
 }
 
-.decision-label-box span {
-	white-space: nowrap;
-	padding: 20px;
-	max-width: 400px;
-	width: 400px;
+div.dec-lbl {
+	font-size: 128px;
 }
 
-.decision-button-box button {
-	width: 400px;
-	background: #80D8FF;
-	border: none;
-	/*border-radius: 10px;*/
-}
-
-.header {
-	/*color: #fff;*/
-	background: #03A9F4;
-	width: 100%;
-	top: 0px;
-}
-
-.header h1 {
-	margin-top: 0px !important;
-	margin-bottom: 50px !important;
-}
-
-.footer {
-	position: absolute;
-	/*color: #fff;*/
-	background: #03A9F4;
-	width: 100%;
-	bottom: 0px;
-}
-
-.decision-wrapper {
-	margin: 0 30px;
+button.dec-btn {
+    font-size: 72px;
+    margin-top: 30px;
+    padding: 15px 50px;
+    background: #fff;
+    border-color: black;
+    border-radius: 5px;
 }

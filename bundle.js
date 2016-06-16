@@ -20415,7 +20415,7 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AppContainer).call(this, props));
 
 			_this.state = {
-				verdict: 'Dun kno, blud'
+				verdict: null
 			};
 			return _this;
 		}
@@ -20433,14 +20433,8 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_header2.default, null),
-					_react2.default.createElement(
-						'div',
-						{ className: 'decision-wrapper' },
-						_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict }),
-						_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
-					),
-					_react2.default.createElement(_footer2.default, null)
+					_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict }),
+					_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
 				);
 			}
 		}]);
@@ -20455,7 +20449,8 @@
 /***/ function(module, exports) {
 
 	exports.makeADecision = function() {
-	    return (Math.ceil(Math.random() * 10) % 2 == 0 ? "Nah, fam" : "Go have a drink");
+	    // return (Math.ceil(Math.random() * 10) % 2 == 0 ? "Nah, fam" : "Go have a drink");
+	    return (Math.ceil(Math.random() * 10) % 2 == 0 ? true : false);
 	}
 
 
@@ -20495,20 +20490,19 @@
 		_createClass(DecisionLabel, [{
 			key: 'render',
 			value: function render() {
-				var colorClass = '';
-				if (this.props.verdict == 'Go have a drink') {
-					colorClass = 'positive';
-				} else if (this.props.verdict == 'Nah, fam') {
-					colorClass = 'negative';
+				var colorClass = 'dec-lbl';
+				var text = 'PUSH DAT SHIT';
+				if (this.props.verdict == true) {
+					text = 'Go have a drink';
+					colorClass += ' positive';
+				} else if (this.props.verdict == false) {
+					text = 'Nah, fam';
+					colorClass += ' negative';
 				}
 				return _react2.default.createElement(
 					'div',
-					{ className: 'decision-label-box col-xs-12' },
-					_react2.default.createElement(
-						'span',
-						{ className: colorClass },
-						this.props.verdict
-					)
+					{ className: colorClass },
+					text
 				);
 			}
 		}]);
@@ -20555,13 +20549,9 @@
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					"div",
-					{ className: "decision-button-box col-xs-12" },
-					_react2.default.createElement(
-						"button",
-						{ onClick: this.props.handleClick },
-						"decide!"
-					)
+					"button",
+					{ className: "dec-btn", onClick: this.props.handleClick },
+					"decide!"
 				);
 			}
 		}]);
