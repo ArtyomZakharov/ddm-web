@@ -20491,7 +20491,7 @@
 			key: 'render',
 			value: function render() {
 				var colorClass = 'dec-lbl';
-				var text = 'PUSH DAT SHIT';
+				var text = 'HIT THE BUTTON!';
 				if (this.props.verdict == true) {
 					text = 'Go have a drink';
 					colorClass += ' positive';
