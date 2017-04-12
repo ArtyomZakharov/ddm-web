@@ -20433,8 +20433,14 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict }),
-					_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
+					_react2.default.createElement(_header2.default, null),
+					_react2.default.createElement(
+						'div',
+						{ className: 'main-things' },
+						_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict }),
+						_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
+					),
+					_react2.default.createElement(_footer2.default, null)
 				);
 			}
 		}]);
