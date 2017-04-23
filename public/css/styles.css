@@ -3,9 +3,10 @@
 }
 
 #content {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .main-things {
@@ -38,10 +39,12 @@ div.dec-lbl {
 }
 
 button.dec-btn {
+    /*width: 400px;*/
     font-size: 72px;
     margin-top: 30px;
     padding: 15px 50px;
     background: #fff;
-    border-color: black;
-    border-radius: 5px;
+    border: none;
+    /*border-color: black;*/
+    /*border-radius: 5px;*/
 }
