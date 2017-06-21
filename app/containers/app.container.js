@@ -25,7 +25,8 @@ class AppContainer extends React.Component {
 		return (
 			<div className="main-things">
 				<DecisionLabel verdict={this.state.verdict} />
-				<DecisionButton handleClick={this.stateVerdict.bind(this)} />
+				{ this.state.verdict === null &&  <DecisionButton handleClick={this.stateVerdict.bind(this)} /> }
+
 			</div>
 		);
 	};

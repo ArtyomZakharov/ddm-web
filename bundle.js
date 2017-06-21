@@ -20434,7 +20434,7 @@
 					'div',
 					{ className: 'main-things' },
 					_react2.default.createElement(_decisionLabel2.default, { verdict: this.state.verdict }),
-					_react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
+					this.state.verdict === null && _react2.default.createElement(_decisionButton2.default, { handleClick: this.stateVerdict.bind(this) })
 				);
 			}
 		}]);

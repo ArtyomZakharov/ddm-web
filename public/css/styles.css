@@ -3,7 +3,7 @@
 }
 
 #content {
-    height: 100vh;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,13 +38,13 @@ div.dec-lbl {
     margin-top: 30px;
 }
 
-button.dec-btn {
+.dec-btn {
     /*width: 400px;*/
     font-size: 72px;
     margin-top: 30px;
     padding: 15px 50px;
-    background: #fff;
-    border: none;
+    /*background: #fff;*/
+    /*border: none;*/
     /*border-color: black;*/
     /*border-radius: 5px;*/
 }
